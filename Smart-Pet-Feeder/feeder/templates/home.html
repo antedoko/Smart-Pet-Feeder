@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block main %}
+
+
+<div class="row">
+    {% if cameraStatus == '1' %}
+        <div class="col-md-6 text-center">
+            <form role="form" name="feedbuttonclick" method="post" action="/feedbuttonclick">
+                <button class="btn btn-lg feedButton" type="submit">Nahrani sada</button>
+            </form>
+        </div>
+
+        <div class="col-md-6 text-center">
+            <br>
+            <form role="form" action="{{cameraSiteAddress}}">
+                <button class="btn btn-lg camButton" type="submit">Live Video</button>
+            </form>
+        </div>
+    {% else %}
+        <div class="col-md-12 text-center">
+            <form role="form" name="feedbuttonclick" method="post" action="/feedbuttonclick">
+                <button class="btn btn-lg feedButton" type="submit">Nahrani sada</button>
+            </form>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

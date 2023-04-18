@@ -1,0 +1,15 @@
+.camButton {
+width:7em;height:3em;
+border-top: 1px solid #919191;
+   background: #27ab5a;
+   color: #ffffff;
+   font-size: 24px;
+   text-align: center;
+
+   }
+.camButton:hover {
+border-top: 1px solid #919191;
+   background: #27ab5a;
+   color: #ffffff;
+   }
+
